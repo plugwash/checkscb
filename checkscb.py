@@ -84,10 +84,6 @@ for source, neededarches in sorted(neededsources.items()):
 	#print(source)
 	brokenarches = set(failures[source].keys())
 	scbarches = neededarches & brokenarches
-	if source == 'acorn':
-		print('brockenarches: '+repr(brokenarches))
-		print('scbarches: '+ repr(scbarches))
-		print('archset: '+ repr(archset))
 	if ("all" in neededarches) and (brokenarches == archset):
 		scbarches.add("all")
 		indepbroken.add(source)
